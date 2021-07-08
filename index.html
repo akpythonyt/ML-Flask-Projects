@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>Car price Prediction</title>
+</head>
+
+<body>
+ <div class="login">
+
+    <h1>Car price prediction</h1>
+
+    <form action="{{ url_for('predict')}}" method="post">
+    <input type="text" name="Year" placeholder="Enter the year">
+    <input type="text" name="Present_Price" placeholder="Present price of the car">
+    <input type="text" name="Kms_Driven" placeholder="kilometers driven">
+    <input type="text" name="Owner" placeholder="Owners">
+    <input type="text" name="Fuel_Type_n" placeholder="(1 Diesel:2 Petrol)">
+    <input type="text" name="Transmission_n" placeholder="(1 Manual:2 Automatic)">
+    <input type="submit">
+
+    <br>
+   <br>
+   {{ prediction_text }}
+
+</form>
+</body>
+</html>
